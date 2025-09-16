@@ -21,11 +21,11 @@ h1 {
 }
 
 main img {
-    width: 200px;
+    width: 150px;
     height: auto;
     margin: 10px;
     border: 1px solid rgb(12 12 12 / 30%);
-    padding: 0px;
+    padding: 2px;
     box-shadow: 0 0 30px rgb(104, 103, 103);
 }
 
@@ -34,7 +34,7 @@ p {
 }
 
 aside {
-    width: 200px;
+    width: 20em;
     height: auto;
     margin: 1em;
     border: 1px solid rgb(0 0 0 / 0.2); /* 1️⃣ */
