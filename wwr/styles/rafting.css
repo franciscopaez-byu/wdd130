@@ -1,18 +1,21 @@
-/* Importamos fuentes de aventura */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
-
+/* =========================================
+   1. VARIABLES DE DISEÑO (Colores parecidos al original)
+   ========================================= */
 :root {
-  --primary-color: #2b5876;    /* Azul profundo */
-  --secondary-color: #ff9f43;  /* Naranja aventura */
-  --earth-brown: #c4a484;      /* Marrón claro/Arena */
+  --primary-color: #2b5876;    
+  --secondary-color: #ff9f43;  
+  --earth-brown: #d7c3ac;      /* Un marrón más suave/arena */
   --accent1-color: #333333;    
-  --bg-light: #fdfaf5;         /* Blanco roto */
+  --bg-light: #ffffff;         /* Volvemos al blanco puro para el cuerpo */
   
-  --logo-font: 'Bangers', system-ui; 
-  --heading-font: 'Montserrat', sans-serif;
-  --body-font: 'Open Sans', sans-serif;
+  --logo-font: 'Arial Black', Gadget, sans-serif; 
+  --heading-font: 'Georgia', serif;
+  --body-font: 'Arial', sans-serif;
 }
 
+/* =========================================
+   2. RESET UNIVERSAL
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -23,29 +26,28 @@ body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   line-height: 1.6;
-  background-color: var(--earth-brown); /* Fondo marrón claro */
+  background-color: var(--earth-brown); /* El "marco" de la web es arena */
 }
 
-/* Contenedor principal */
 header, main, footer {
   max-width: 840px;
   margin: 0 auto;
-  background-color: var(--bg-light);
+  background-color: var(--bg-light); /* El centro vuelve a ser blanco */
 }
 
 /* =========================================
-   HEADER Y NAVEGACIÓN (Estilo Modelo 1)
+   3. HEADER Y NAV
    ========================================= */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid var(--earth-brown);
 }
 
 header img {
-  width: 100px; /* Logo de la izquierda */
+  width: 100px;
 }
 
 nav ul {
@@ -53,108 +55,123 @@ nav ul {
   display: flex;
 }
 
-nav ul li {
-  margin-left: 20px;
-}
+nav ul li { margin-left: 20px; }
 
 nav a {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
-  font-family: var(--heading-font);
-  font-size: 0.9rem;
   text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
 /* =========================================
-   HERO CON NOMBRE CENTRADO
+   4. HERO (Posicionamiento Absoluto Requerido)
    ========================================= */
 .hero {
   position: relative;
-  text-align: center;
+  overflow: hidden; /* Mantiene todo dentro de los bordes */
 }
 
 .hero > img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
-/* El nombre de la empresa ahora vive sobre la imagen */
 .hero h1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-2deg); /* Centrado absoluto y rotación */
-  width: 90%;
+  top: 15%; /* Ajustado para que no tape el centro */
+  left: 0;
+  width: 100%;
+  text-align: center;
   font-family: var(--logo-font);
-  font-size: 4rem; /* Más grande y aventurero */
+  font-size: 3.5rem;
   color: white;
-  text-shadow: 4px 4px 0px var(--primary-color), 6px 6px 15px rgba(0,0,0,0.5);
-  background-color: rgba(0, 0, 0, 0.2); /* Fondo sutil para legibilidad */
-  padding: 10px;
-  pointer-events: none;
+  /* Sombra fuerte para contraste sin usar fondo negro */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  z-index: 5;
 }
 
 .hero article {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 25px;
-  width: 90%;
-  margin: -30px auto 20px;
-  position: relative;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  right: 5%;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparencia elegante */
+  padding: 20px;
+  border-radius: 8px;
+  border-bottom: 5px solid var(--secondary-color);
   z-index: 10;
 }
 
 .hero article img {
   float: right;
-  width: 180px;
-  height: 180px;
+  width: 160px; /* Tamaño solicitado */
+  height: 160px;
+  object-fit: cover;
   border-radius: 50%;
   border: 4px solid white;
-  margin-left: 15px;
-  object-fit: cover;
+  margin-left: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero article::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* =========================================
-   SECCIONES
+   5. SECCIONES (History y Adventure)
    ========================================= */
 h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
-  margin: 20px;
+  margin: 30px 20px 10px;
+  padding-bottom: 5px;
   border-bottom: 2px solid var(--secondary-color);
 }
 
 section p {
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 25px 20px;
 }
 
+/* Sección Adventure Awaits You! */
+section:last-of-type {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  margin: 20px;
+  padding: 40px 20px;
+  border-radius: 5px;
+}
 
-/* 8. Footer y Redes Sociales - AJUSTE FINAL */
+section:last-of-type h2 {
+  color: var(--secondary-color);
+  border: none;
+  margin: 0 0 10px 0;
+}
+
+/* =========================================
+   6. FOOTER Y REDES SOCIALES
+   ========================================= */
 footer {
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-top: 1px solid #ccc;
-  background-color: var(--bg-light); /* Para mantener la coherencia */
+  padding: 30px 20px;
+  border-top: 1px solid #ddd;
 }
 
 .socialmedia {
   margin-top: 15px;
-  display: flex;       /* Usamos flex para centrarlos mejor */
+  display: flex;
   justify-content: center;
-  gap: 15px;          /* Espacio entre iconos */
-}
-
-.socialmedia a {
-  display: inline-block;
-  line-height: 0;     /* Elimina espacios extraños debajo del link */
+  gap: 20px;
 }
 
 .socialmedia img {
-  /* Forzamos el tamaño pequeño que tenían originalmente */
-  width: 30px;        
-  height: 30px;       
-  object-fit: contain; /* Asegura que no se deformen */
-  display: block;
+  width: 22px; /* Tamaño ideal según el primer modelo */
+  height: auto;
 }
+
+.socialmedia a { text-decoration: none; }
