@@ -1,21 +1,16 @@
-/* =========================================
-   1. VARIABLES DE DISEÑO (Colores parecidos al original)
-   ========================================= */
+
 :root {
   --primary-color: #2b5876;    
   --secondary-color: #ff9f43;  
-  --earth-brown: #d7c3ac;      /* Un marrón más suave/arena */
+  --earth-brown: #d7c3ac;     
   --accent1-color: #333333;    
-  --bg-light: #ffffff;         /* Volvemos al blanco puro para el cuerpo */
-  
+  --bg-light: #ffffff;         
   --logo-font: 'Arial Black', Gadget, sans-serif; 
   --heading-font: 'Georgia', serif;
   --body-font: 'Arial', sans-serif;
 }
 
-/* =========================================
-   2. RESET UNIVERSAL
-   ========================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -26,18 +21,16 @@ body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   line-height: 1.6;
-  background-color: var(--earth-brown); /* El "marco" de la web es arena */
+  background-color: var(--earth-brown); 
 }
 
 header, main, footer {
   max-width: 840px;
   margin: 0 auto;
-  background-color: var(--bg-light); /* El centro vuelve a ser blanco */
+  background-color: var(--bg-light); 
 }
 
-/* =========================================
-   3. HEADER Y NAV
-   ========================================= */
+
 header {
   display: flex;
   align-items: center;
@@ -65,12 +58,10 @@ nav a {
   font-size: 0.85rem;
 }
 
-/* =========================================
-   4. HERO (Posicionamiento Absoluto Requerido)
-   ========================================= */
+
 .hero {
   position: relative;
-  overflow: hidden; /* Mantiene todo dentro de los bordes */
+  overflow: hidden; 
 }
 
 .hero > img {
@@ -81,14 +72,14 @@ nav a {
 
 .hero h1 {
   position: absolute;
-  top: 15%; /* Ajustado para que no tape el centro */
+  top: 15%; 
   left: 0;
   width: 100%;
   text-align: center;
   font-family: var(--logo-font);
   font-size: 3.5rem;
   color: white;
-  /* Sombra fuerte para contraste sin usar fondo negro */
+  
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   z-index: 5;
 }
@@ -98,7 +89,7 @@ nav a {
   bottom: 20px;
   left: 5%;
   right: 5%;
-  background-color: rgba(255, 255, 255, 0.9); /* Transparencia elegante */
+  background-color: rgba(255, 255, 255, 0.9); 
   padding: 20px;
   border-radius: 8px;
   border-bottom: 5px solid var(--secondary-color);
@@ -107,7 +98,7 @@ nav a {
 
 .hero article img {
   float: right;
-  width: 160px; /* Tamaño solicitado */
+  width: 160px; 
   height: 160px;
   object-fit: cover;
   border-radius: 50%;
@@ -122,9 +113,7 @@ nav a {
   clear: both;
 }
 
-/* =========================================
-   5. SECCIONES (History y Adventure)
-   ========================================= */
+
 h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
@@ -137,7 +126,7 @@ section p {
   padding: 0 20px 25px 20px;
 }
 
-/* Sección Adventure Awaits You! */
+
 section:last-of-type {
   background-color: var(--primary-color);
   color: white;
@@ -153,9 +142,7 @@ section:last-of-type h2 {
   margin: 0 0 10px 0;
 }
 
-/* =========================================
-   6. FOOTER Y REDES SOCIALES
-   ========================================= */
+
 footer {
   text-align: center;
   padding: 30px 20px;
@@ -170,7 +157,7 @@ footer {
 }
 
 .socialmedia img {
-  width: 22px; /* Tamaño ideal según el primer modelo */
+  width: 22px; 
   height: auto;
 }
 
