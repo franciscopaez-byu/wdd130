@@ -1,10 +1,10 @@
-/* 1. Centrar el contenido y limitar el ancho */
+
 header, .grid, footer {
   max-width: 840px;
   margin: 0 auto;
 }
 
-/* 2. Configuración del Nav (Flexbox) */
+
 nav {
   background-color: steelblue;
   padding: 1rem;
@@ -21,10 +21,10 @@ nav a {
   color: white;
 }
 
-/* 3. Configuración del Layout (Grid) */
+
 .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Columna pequeña para aside, grande para main */
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
   align-items: start;
 }
