@@ -26,7 +26,7 @@
 
     <main>
         <section class="contact-header">
-            <h1>Contact Us</h1>
+            <h1>Contact Us - RioVibe Adventures</h1>
         </section>
 
         <div class="contact-grid">
@@ -65,9 +65,14 @@
 
                     <fieldset>
                         <legend>Purpose of Message</legend>
-                        <label><input type="radio" name="purpose" value="inquiry"> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                        <label for="inquiry"><input type="radio" id="inquiry" name="purpose" value="inquiry"> General
+                            Inquiry</label>
+                        <label for="reservation"><input type="radio" id="reservation" name="purpose"
+                                value="reservation"> Reservation
+                            Question</label>
+                        <label for="suggestion"><input type="radio" id="suggestion" name="purpose" value="suggestion">
+                            Website
+                            Suggestion</label>
                     </fieldset>
 
                     <div class="form-item">
@@ -76,10 +81,8 @@
                     </div>
 
                     <div class="form-item checkbox">
-                        <label>
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            Please subscribe me to the monthly newsletter
-                        </label>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Please subscribe me to the monthly newsletter</label>
                     </div>
 
                     <button type="submit" class="submit-btn">Send Adventure Inquiry</button>
@@ -92,7 +95,7 @@
             <div class="employee-gallery">
                 <figure>
                     <img src="images/employee1.jpg" alt="hubert Jenkins, Head Guide">
-                    <figcaption><strong>Sarah Jenkins</strong><br>Head Expedition Guide</figcaption>
+                    <figcaption><strong>hubert Jenkins</strong><br>Head Expedition Guide</figcaption>
                 </figure>
                 <figure>
                     <img src="images/employee2.jpg" alt="Mike Rivera, Safety Officer">
