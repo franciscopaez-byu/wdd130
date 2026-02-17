@@ -64,18 +64,18 @@ nav a {
 }
 
 
-.hero {
+.about-page .hero {
   position: relative;
   overflow: hidden; 
 }
 
-.hero > img {
+.about-page .hero > img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.hero h1 {
+.about-page .hero h1 {
   position: absolute;
   top: 15%; 
   left: 0;
@@ -89,7 +89,7 @@ nav a {
   z-index: 5;
 }
 
-.hero article {
+.about-page .hero article {
   position: absolute;
   bottom: 20px;
   left: 5%;
@@ -102,7 +102,7 @@ nav a {
   z-index: 10;
 }
 
-.hero article img {
+.about-page .hero article img {
   float: right;
   width: 120px; 
   height: 120px;
@@ -114,7 +114,7 @@ nav a {
 }
 
 
-h2 {
+.about-page h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
   margin: 30px 20px 10px;
@@ -123,7 +123,7 @@ h2 {
 }
 
 
-.history-content {
+.about-page .history-content {
   display: grid;
   grid-template-columns: 1fr 280px 1fr; 
   align-items: center;
@@ -131,7 +131,7 @@ h2 {
   padding: 0 20px 25px 20px;
 }
 
-.history-content img {
+.about-page .history-content img {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -139,37 +139,37 @@ h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.history-content p:first-of-type {
+.about-page .history-content p:first-of-type {
   order: 1;
   text-align: right;
 }
 
-.history-content p:last-of-type {
+.about-page .history-content p:last-of-type {
   order: 3;
   text-align: left;
 }
 
 
-.adventures h2 {
+.about-page .adventures h2 {
   text-align: center;
   margin: 40px 0 20px 0;
   border-bottom: 2px solid var(--secondary-color);
 }
 
-.adventure-gallery {
+.about-page .adventure-gallery {
   display: flex;
   justify-content: space-between; 
   gap: 10px;
   padding: 20px;
 }
 
-.adventure-gallery figure {
+.about-page .adventure-gallery figure {
   flex: 1;
   margin: 0;
   text-align: center;
 }
 
-.adventure-gallery img {
+.about-page .adventure-gallery img {
   width: 100%;
   height: 110px;
   object-fit: cover;
@@ -177,7 +177,7 @@ h2 {
   display: block;
 }
 
-.adventure-gallery figcaption {
+.about-page .adventure-gallery figcaption {
   margin-top: 8px;
   font-size: 0.75rem;
   color: var(--primary-color);
@@ -207,7 +207,6 @@ footer {
   height: auto;
 }
 
-/* RESPONSIVIDAD (Media Queries) */
 @media (max-width: 768px) {
   .history-content {
     grid-template-columns: 1fr;
@@ -262,7 +261,7 @@ footer {
 }
 
 
-.contact-grid {
+.Contact-page .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 30px;
@@ -271,7 +270,7 @@ footer {
 }
 
 
-.contact-header h1 {
+.Contact-page .contact-header h1 {
     text-align: center;
     margin: 40px 0 20px;
     font-family: var(--heading-font);
@@ -279,19 +278,19 @@ footer {
 }
 
 
-.contact-details {
+.Contact-page .contact-details {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.info-card address {
+.Contact-page .info-card address {
     font-style: normal;
     margin: 10px 0;
     line-height: 1.5;
 }
 
-.map-container iframe {
+.Contact-page .map-container iframe {
     width: 100%;
     height: 350px; 
     border: none;
@@ -300,35 +299,35 @@ footer {
 }
 
 
-.form-section {
+.Contact-page .form-section {
     background-color: #f4f4f4; 
     padding: 25px;
     border-radius: 8px;
     border-top: 5px solid var(--secondary-color);
 }
 
-.form-section h2 {
+.Contact-page .form-section h2 {
     margin-top: 0; 
 }
 
-form {
+.Contact-page form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.form-item {
+.Contact-page .form-item {
     display: flex;
     flex-direction: column;
 }
 
-.form-item label {
+.Contact-page .form-item label {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.form-item input, 
-.form-item textarea {
+.Contact-page .form-item input, 
+.Contact-page .form-item textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -336,20 +335,20 @@ form {
 }
 
 
-fieldset {
+.Contact-page fieldset {
     border: 1px solid var(--earth-brown);
     padding: 15px;
     border-radius: 4px;
 }
 
-legend {
+.Contact-page legend {
     font-weight: bold;
     padding: 0 10px;
     color: var(--primary-color);
 }
 
 
-.submit-btn {
+.Contact-page .submit-btn {
     background-color: var(--primary-color);
     color: white;
     padding: 15px;
@@ -361,28 +360,28 @@ legend {
     transition: background 0.3s;
 }
 
-.submit-btn:hover {
+.Contact-page .submit-btn:hover {
     background-color: var(--secondary-color);
 }
 
 
-.employees {
+.Contact-page .employees {
     padding: 40px 20px;
 }
 
-.employee-gallery {
+.Contact-page .employee-gallery {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.employee-gallery figure {
+.Contact-page .employee-gallery figure {
     text-align: center;
     max-width: 200px;
 }
 
-.employee-gallery img {
+.Contact-page .employee-gallery img {
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -395,4 +394,215 @@ legend {
     .contact-grid {
         grid-template-columns: 1fr; 
     }
+}
+
+.index-page main {
+    margin: 0 auto;
+}
+
+ .index-page .hero {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.index-page .hero-bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Título superior (Como el ejemplo de About) */
+.index-page .hero-title {
+    position: absolute;
+    top: 10%; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.9), 2px 2px 5px rgba(0, 0, 0, 1);
+    z-index: 5;
+    margin: 0;
+}
+
+/* Caja de texto inferior (Simple, sin imagen central) */
+.index-page .hero-card {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    /* Cambia 'blue' por tu color secundario si tienes la variable */
+    border-bottom: 5px solid #2e6b8a; 
+    z-index: 10;
+}
+
+.index-page .hero-card p {
+    color: #333;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+
+.index-page .grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.index-page .grid-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.index-page .grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.index-page .cta-section {
+    background-color: #2e6b8a; 
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.index-page .cta-button {
+    display: inline-block;
+    background-color: #ff9800; 
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: transform 0.3s;
+}
+
+.index-page .cta-button:hover {
+    transform: scale(1.1); 
+}
+
+.index-page .newsletter {
+    background-color: #eef4f7;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.index-page .newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.index-page .newsletter input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 250px;
+}
+
+.index-page .newsletter button {
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .index-page .grid-content {
+        grid-template-columns: 1fr; 
+    }
+    
+    .index-page .hero {
+        height: 400px;
+    }
+}
+
+/*trips*/
+
+.trips-page main {
+    padding: 40px 5%;
+    margin: 0 auto;
+    
+}
+
+.trips-page h1 {
+    text-align: center;
+    color: #2e6b8a;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.trip-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid #ff9800; 
+}
+
+.trip-card:hover {
+    transform: translateY(-10px); 
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.trip-info h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.trip-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.book-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #2e6b8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    background-color: #ff9800;
 }
