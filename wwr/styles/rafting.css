@@ -412,7 +412,7 @@ footer {
     display: block;
 }
 
-/* Título superior (Como el ejemplo de About) */
+
 .index-page .hero-title {
     position: absolute;
     top: 10%; 
@@ -426,7 +426,7 @@ footer {
     margin: 0;
 }
 
-/* Caja de texto inferior (Simple, sin imagen central) */
+
 .index-page .hero-card {
     position: absolute;
     bottom: 20px;
@@ -436,7 +436,7 @@ footer {
     padding: 25px;
     border-radius: 8px;
     text-align: center;
-    /* Cambia 'blue' por tu color secundario si tienes la variable */
+    
     border-bottom: 5px solid #2e6b8a; 
     z-index: 10;
 }
